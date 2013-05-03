@@ -1,0 +1,22 @@
+<?php
+    
+	
+    $form = $this->form;
+    $form->setAttribute('action', $this->url('application', array('action' => 'contactform')));
+    $form->prepare();
+	
+	echo $this->form()->openTag($form);
+    echo $this->formRow($form->get('email'));
+    echo $this->formRow($form->get('feedback'));
+	//echo $this->formRow($form->get('captcha'));
+    echo $this->formSubmit($form->get('ContactSub'));
+    echo $this->form()->closeTag();
+	
+	
+
+                     
+
+                       
+                
+
+?>

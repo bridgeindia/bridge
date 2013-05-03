@@ -1,0 +1,131 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+       
+        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
+                        ->prependStylesheet($this->basePath() . '/css/style.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+                                      ->prependFile($this->basePath() . '/js/bootstrap.min.js')
+                                      ->prependFile($this->basePath() . '/js/jquery.min.js')
+									  ->prependFile($this->basePath() . '/js/contactform.js') ?>
+									  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+<style>
+.ui-menu { 
+    overflow: hidden;
+}
+.ui-menu .ui-menu {
+    overflow: visible !important;
+}
+.ui-menu > li { 
+    float: left;
+    display: block;
+    width: auto !important;
+}
+.ui-menu ul li {
+    display:block;
+    float:none;
+}
+.ui-menu ul li ul {
+    left:120px !important;
+    width:100%;
+}
+.ui-menu ul li ul li {
+    width:auto;
+}
+.ui-menu ul li ul li a {
+    float:left;
+}
+.ui-menu > li {
+    margin: 5px 5px !important;
+    padding: 0 0 !important;
+}
+.ui-menu > li > a { 
+    float: left;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.ui-menu .ui-menu-icon { 
+    margin-top: 0.3em !important;
+}
+.ui-menu .ui-menu .ui-menu li { 
+    float: left;
+    display: block;
+}
+.mainnav{
+	margin-left:200px;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="<?php echo $this->url('home') ?>"><img src="<?php echo $this->basePath();?>/img/cochin1.jpg" alt="cochin" /> <img src="<?php echo $this->basePath();?>/img/cochin2.jpg" alt="cochin" /> <img src="<?php echo $this->basePath();?>/img/cochin3.jpg" alt="cochin" /> <img src="<?php echo $this->basePath();?>/img/cochin4.jpg" alt="cochin" /></a>
+					<br/>
+                   
+                </div>
+				 <div class="mainnav">
+                        <ul id="nav">
+                            <li class="active"><a href="<?php echo $this->url('home') ?>onestop/"><?php echo $this->translate('About Us') ?></a></li>
+							<li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Food on your mind?') ?></a>
+							     <ul>
+								 <li>South Indian</li>
+								 <li>North Indian</li>
+								 <li>Sea food </li>
+								 <li>Chinese </li>
+								 <li>Japanese(original, not indianised!) </li>
+								 <li>Arabian</li>
+								 <li>Not Sure?</li>
+								 </ul>
+							
+							
+							</li>
+							<li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Lets go Shopping!') ?></a>
+							 <ul>
+								 <li>Ethnic Indian(sarees)</li>
+								 <li>Daily wear(south indian)</li>
+								 <li>Party wear(other than sarees)</li>
+								 <li>Western wear(as close as it gets!)</li>
+								 <li>sandals(party wear)</li>
+								 <li>Daily wear sandals</li>
+								 <li>Souvenirs</li>
+								 <li>Not sure?</li>
+								 </ul>
+							
+							
+							</li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+            </div>
+        </div>
+        <div class="containerContent">
+            <?php echo $this->content; ?>
+            <hr>
+            <footer>
+               
+            </footer>
+        </div> <!-- /container -->
+        <?php echo $this->inlineScript() ?>
+    </body>
+	<script>
+$( "#nav" ).menu({position: {at: "left bottom"}});
+</script>
+</html>
